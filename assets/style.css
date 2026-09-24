@@ -15,3 +15,26 @@
 
 /* richer CarPlay hero artwork */
 .screen{position:relative;padding:42px 16px 16px 66px;background:radial-gradient(circle at 25% 35%,#123f58 0,transparent 28%),linear-gradient(145deg,#07131f,#0b2033);overflow:hidden}.cpbar{position:absolute;top:12px;left:72px;right:18px;display:flex;justify-content:space-between;color:#dceafa;font-size:10px}.cpdock{position:absolute;left:12px;top:48px;bottom:15px;width:42px;border-radius:14px;background:#08121d99;border:1px solid #ffffff14;display:flex;flex-direction:column;justify-content:center;gap:15px;align-items:center}.cpdock i{font-style:normal;font-size:18px}.screen .map{overflow:hidden;background:linear-gradient(145deg,#0b3347,#0b2638)!important}.road{position:absolute;height:8px;background:#38738a55;border-radius:20px;transform-origin:left}.r1{width:120%;left:-15%;top:42%;transform:rotate(-22deg)}.r2{width:100%;left:10%;top:64%;transform:rotate(28deg)}.r3{width:80%;left:28%;top:25%;transform:rotate(67deg)}.screen .map>b{position:relative;z-index:2}.route{z-index:2}.route small{display:block}.arrow{position:absolute;bottom:18px;right:24px;color:#2a9dff;font-style:normal;font-size:26px;transform:rotate(15deg);text-shadow:0 0 16px #28aaff}.screen .app{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}.screen .app i{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;color:white;font-style:normal;font-weight:900;font-size:18px}.screen .youtube i{background:#ff2530}.screen .zaloapp i{background:#168cff}.screen .tiktokapp i{background:linear-gradient(135deg,#111 42%,#22d5df 43%,#ff315e)}.screen .music{display:flex;align-items:center;gap:12px}.cover{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#ff7a2f,#168cff);display:grid;place-items:center;font-weight:900}.screen .music>div:last-child{display:flex;flex-direction:column;gap:3px}.screen .music span{font-size:12px;margin-top:5px}
+
+/* responsive navigation and account entry */
+.menu-toggle{display:none;width:44px;height:44px;flex:none;align-items:center;justify-content:center;flex-direction:column;gap:5px;border:1px solid #ffffff24;border-radius:13px;background:#0a1b2c;color:#fff;cursor:pointer}
+.menu-toggle span{width:19px;height:2px;border-radius:2px;background:#eaf5ff;transition:transform .2s,opacity .2s}
+.menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(7px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-7px) rotate(-45deg)}
+.top nav .mobile-login{display:none}
+.login-notice{position:fixed;z-index:100;left:50%;bottom:22px;transform:translate(-50%,12px);max-width:calc(100vw - 28px);padding:13px 18px;border:1px solid #36bfff88;border-radius:14px;background:#091a2b;color:#f7f9fd;font-size:13px;line-height:1.45;box-shadow:0 12px 40px #000b;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.login-notice.visible{opacity:1;transform:translate(-50%,0)}
+@media(max-width:950px){
+.top{position:relative;z-index:20;justify-content:space-between}
+.top nav{display:none;flex:none}
+.top>button.desktop-login{display:none}
+.menu-toggle{display:flex}
+.top.menu-open nav{display:flex;position:absolute;top:calc(100% - 1px);left:16px;right:16px;z-index:30;flex-direction:column;gap:0;padding:8px;border:1px solid #2c4c69;border-radius:17px;background:linear-gradient(145deg,#0b1d30,#06111f);box-shadow:0 24px 55px #000b}
+.top.menu-open nav a{display:block;padding:14px 13px;border-bottom:1px solid #ffffff12;font-size:15px}
+.top nav .mobile-login{display:block;width:100%;margin-top:8px;padding:13px 16px;border:0;border-radius:12px;color:white;font-weight:700;background:linear-gradient(90deg,#147dff,#25c8ff);text-align:center}
+}
+@media(max-width:620px){
+.top.menu-open nav{left:12px;right:12px}
+.login-notice{bottom:14px;font-size:12px}
+}
