@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#06101d">
+<title>TAstore Repo — Sileo</title>
+<style>
+:root{color-scheme:dark;--line:#263e57;--text:#f3f7fc;--muted:#aab9ca;--cyan:#35c9ff;--orange:#ff8a42}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 80% 0,#164c68 0,transparent 30%),linear-gradient(145deg,#06101d,#020812 75%);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:940px;margin:auto;padding:26px}
+a{color:inherit}
+header{height:65px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffffff16}
+.brand{text-decoration:none;font-size:19px;font-weight:850;letter-spacing:-.04em}.brand span{color:var(--cyan)}
+.back{color:#c0cada;font-size:13px;text-decoration:none}
+.panel{margin:54px 0 20px;padding:clamp(22px,5vw,42px);border:1px solid #2d516b;border-radius:25px;background:linear-gradient(145deg,#10263aee,#091321ee);box-shadow:0 24px 70px #0007}
+.kicker{color:var(--cyan);font-size:11px;font-weight:800;letter-spacing:.15em}
+h1{font-size:clamp(34px,7vw,58px);line-height:1.02;letter-spacing:-.055em;margin:13px 0}
+.lead{color:#c6d3e2;font-size:16px;line-height:1.65;max-width:680px}
+.status{display:inline-flex;align-items:center;gap:9px;margin:10px 0 24px;padding:9px 13px;border:1px solid #f2b24f55;border-radius:99px;background:#dc9b2015;color:#ffda91;font-size:12px;font-weight:750}
+.dot{width:8px;height:8px;border-radius:50%;background:#ffb83f;box-shadow:0 0 10px #ffb83f}
+.url{padding:16px;border:1px solid #ffffff20;border-radius:14px;background:#030b14;color:#a9dfff;overflow-wrap:anywhere;font:13px ui-monospace,SFMono-Regular,Menlo,monospace}
+button{margin-top:12px;border:0;border-radius:12px;padding:13px 17px;background:linear-gradient(90deg,#147dff,#25c8ff);color:#fff;font-weight:800;cursor:pointer}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.step{padding:17px;border:1px solid var(--line);border-radius:15px;background:#071421}
+.step b{color:var(--cyan);font-size:11px;letter-spacing:.1em}.step h2{font-size:15px;margin:9px 0}.step p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+.note{padding:16px;border-left:3px solid var(--orange);border-radius:0 12px 12px 0;background:#ff8a4210;color:#d7c3b4;font-size:13px;line-height:1.6;margin-top:20px}
+footer{padding:24px 0 35px;color:#8394a8;font-size:12px}
+@media(max-width:620px){main{padding:16px}.panel{margin-top:34px}.steps{grid-template-columns:1fr}.lead{font-size:15px}}
+</style>
+</head>
+<body><main>
+<header><a class="brand" href="../">TA<span>store</span> · Repo</a><a class="back" href="../">← Về cửa hàng</a></header>
+<section class="panel">
+<div class="kicker">TAstore • SILEO PACKAGE SOURCE</div>
+<h1>Repo Sileo<br><span style="color:#35c9ff">đang chuẩn bị.</span></h1>
+<p class="lead">Đây là địa chỉ nguồn thử nghiệm của TAstore. Cấu trúc APT đã có; hiện kho chưa có gói .deb phát hành nên chưa thể tìm hoặc cài tweak.</p>
+<div class="status"><i class="dot"></i> 0 gói đang phát hành · chưa sẵn sàng cài đặt</div>
+<div class="url" id="repoUrl">https://sushibta25-design.github.io/TAstore/repo/</div>
+<button type="button" id="copyRepo">Sao chép địa chỉ repo</button>
+<div class="steps">
+<article class="step"><b>BƯỚC 01</b><h2>Mở tab Sources trong Sileo</h2><p>Chọn Edit, nhấn dấu cộng để thêm nguồn mới.</p></article>
+<article class="step"><b>BƯỚC 02</b><h2>Dán địa chỉ TAstore</h2><p>Nhấn Add Source. Khi nguồn sẵn sàng, Sileo sẽ tải danh mục gói.</p></article>
+<article class="step"><b>BƯỚC 03</b><h2>Chọn gói để cài</h2><p>Gói sẽ xuất hiện sau khi có bản .deb tương thích được phát hành.</p></article>
+</div>
+<div class="note">Trạng thái hiện tại chỉ phù hợp để kiểm tra giao diện nguồn. Đừng xem repo này là kho cài đặt hoàn chỉnh cho tới khi có gói đã kiểm thử, chỉ mục được cập nhật và chữ ký phát hành.</div>
+</section>
+<footer>TAstore · DRIVE SMARTER, ENJOY MORE</footer>
+<script>
+document.getElementById('copyRepo').addEventListener('click',async()=>{const b=document.getElementById('copyRepo');try{await navigator.clipboard.writeText(document.getElementById('repoUrl').textContent);b.textContent='Đã sao chép'}catch(e){b.textContent='Hãy nhấn giữ địa chỉ để sao chép'}setTimeout(()=>b.textContent='Sao chép địa chỉ repo',2200)});
+</script>
+</main></body></html>

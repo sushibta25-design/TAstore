@@ -1,0 +1,16 @@
+Origin: TAstore
+Label: TAstore
+Suite: stable
+Codename: stable
+Architectures: iphoneos-arm iphoneos-arm64
+Components: main
+Description: TAstore jailbreak package repository
+MD5Sum:
+ 68b329da9893e34099c7d8ad5cb9c940 1 Packages
+ c015433374d6e2ec34eb3818baf2bfa4 21 Packages.gz
+SHA1:
+ adc83b19e793491b1c6ea0fd8b46cd9f32e592fc 1 Packages
+ 9a9c1f5996f24c12a332301edd2170de642a4bfc 21 Packages.gz
+SHA256:
+ 01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b 1 Packages
+ 34d5848c995803cfd00c2f7f02d807e2069b51ffca60a40f05d2d7229ef13b69 21 Packages.gz
