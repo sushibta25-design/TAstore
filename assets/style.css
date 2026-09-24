@@ -38,3 +38,4 @@
 .top.menu-open nav{left:12px;right:12px}
 .login-notice{bottom:14px;font-size:12px}
 }
+@media(max-width:950px){.top>button.menu-toggle{display:flex}}
